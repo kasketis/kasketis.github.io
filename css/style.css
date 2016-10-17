@@ -5,7 +5,7 @@
  *    user zoom.
  */
 html {
-  font-family: sans-serif;
+  font-family: Consolas, sans-serif;
   /* 1 */
   -ms-text-size-adjust: 100%;
   /* 2 */
@@ -850,8 +850,7 @@ header {
 
 .home .screen {
   width: 60%;
-  min-height: 150px;
-  text-shadow: #000 0px 1px 0px; }
+  min-height: 150px; }
 
 .screen-typed {
   font-size: 2rem;
