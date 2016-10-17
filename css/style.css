@@ -818,7 +818,7 @@ header {
 .screen {
   position: relative;
   font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
-  padding-bottom: 6rem;
+  padding-bottom: 0rem;
   margin: 0 auto;
   background-color: #B2B2B2;
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAHUlEQVQIW2PcuHHjM39/fykGKGCEMTAEYCoxVAAAXMUIBaMUxRcAAAAASUVORK5CYII=) repeat; }
@@ -849,7 +849,7 @@ header {
   width: 80%; }
 
 .home .screen {
-  width: 50%;
+  width: 60%;
   min-height: 150px;
   text-shadow: #000 0px 1px 0px; }
 
@@ -872,13 +872,16 @@ header {
   transition: all 0.5s ease-out;
 }*/
 #typed-cursor {
+  background-color: #777;
+  color: #777;
+  width:20px;
+  height: 30px;
   opacity: 1;
-  font-weight: 100;
-  -webkit-animation: blink 0.7s infinite;
-  -moz-animation: blink 0.7s infinite;
-  -ms-animation: blink 0.7s infinite;
-  -o-animation: blink 0.7s infinite;
-  animation: blink 0.7s infinite; }
+  -webkit-animation: blink 1s infinite;
+  -moz-animation: blink 1s infinite;
+  -ms-animation: blink 1s infinite;
+  -o-animation: blink 1s infinite;
+  animation: blink 1s infinite; }
 
 @keyframes blink {
   0% {
@@ -1170,12 +1173,13 @@ header {
 
 }
 
-.typed-cursor{
-    font-size: 500px;
-    opacity: 1;
-    -webkit-animation: blink 0.7s infinite;
-    -moz-animation: blink 0.7s infinite;
-    animation: blink 0.7s infinite;
+.typed{
+    color:#777;
+}
+
+.cursor{
+    color:#777;
+
 }
 
 @media only screen and (max-width: 40em) {
