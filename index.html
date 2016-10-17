@@ -37,33 +37,43 @@ jQuery(document).ready(function() {
         })
     }
 
+    jQuery("#cursor1").hide(),
+    jQuery("#cursor2").hide(),
+    jQuery("#cursor3").hide(),
+    jQuery("#cursor4").hide(),
+
+
     jQuery("#cursor1").show(), jQuery("#screentyped-1").typed({
-        strings: [">", "> Hi! I'm Christos! ", "> Hi! I'm Chris! "],
-        stringsstops: [1, 12, 0],
+        strings: ["", "whoai ", "whoami "],
+        stringsstops: [0, 3, 0],
         typeSpeed: 100,
         startDelay: 0,
         callback: function() {
-            jQuery("#typed-cursor").remove(), jQuery("#cursor2").show(), jQuery("#screentyped-2").typed({
-                strings: ["> Master's degree student -", "> Master's degree student @ University of Athens"],
-                stringsstops: [25, 0],
-                typeSpeed: 40,
+            jQuery("#typed-cursor").remove(), $("#com-1").append("Hi, I'm Chris!"), jQuery("#cursor2").show(), jQuery("#screentyped-2").typed({
+                strings: ["echo about.txt"],
+                stringsstops: [0],
+                typeSpeed: 50,
+                startDelay: 3000,
                 callback: function() {
-                    jQuery("#typed-cursor").remove(), jQuery("#cursor3").show(), jQuery("#screentyped-3").typed({
-                        strings: ["> Curious aout", "> Curious about how things work."],
-                        stringsstops: [10, 0],
-                        typeSpeed: 40,
-		                callback: function() {
-		                    jQuery("#typed-cursor").remove(), jQuery("#cursor4").show(), jQuery("#screentyped-4").typed({
-		                        strings: ["> Playing around with iO", "> Playing around with [iOS, networks, servers, legos, drones, security];"],
-		                        stringsstops: [19, 0],
-		                        typeSpeed: 40,
-		                        callback: function() {
-		                            clearInterval(r), clearInterval(i), $('#social').show()
-		                        }
-		                    })
-                		}
+                    jQuery("#typed-cursor").remove(), $("#com-2").append("Master's degree student @ University of Athens.<br/>Curious about how things work."), jQuery("#cursor3").show(), jQuery("#screentyped-3").typed({
+                        strings: ["more"],
+                        stringsstops: [0],
+                        typeSpeed: 50,
+                        startDelay: 4000,
+                        callback: function() {
+                            jQuery("#typed-cursor").remove(), setTimeout(function(){ $("#com-3").append("Playing around with [iOS, networks, servers, legos, drones, security];"), jQuery("#cursor4").show(), jQuery("#screentyped-4").typed({
+                                strings: ["sudo :(){ :: & ", "sudo :(){ :|: & };:"],
+                                stringsstops: [8, 0],
+                                typeSpeed: 100,
+                                startDelay: 10000,
+                                callback: function() {
+                                    jQuery("#typed-cursor").remove(), clearInterval(r), clearInterval(i)
+                                }
+                            })
+                            }, 1000)
+                        }
                     })
-                }
+        		}
             })
         }
     });
@@ -78,10 +88,17 @@ jQuery(document).ready(function() {
     			<div class="screen">
     				<div class="screen-wrapper">
     					<div class="screen-typed">
-    						<span class="cursor" id="cursor1"> </span> <span id="screentyped-1"></span><br/>
-    						<span class="cursor" id="cursor2"> </span> <span id="screentyped-2"></span><br/>
-    						<span class="cursor" id="cursor3"> </span> <span id="screentyped-3"></span><br/>
-    						<span class="cursor" id="cursor4"> </span> <span id="screentyped-4"></span>
+                            <span class="cursor" id="cursor1">>  </span> <span id="screentyped-1"></span><br/>
+    						<span id="com-1"></span><br/><br/>
+
+    						<span class="cursor" id="cursor2">>  </span> <span id="screentyped-2"></span><br/>
+                            <span id="com-2"></span><br/><br/>
+
+    						<span class="cursor" id="cursor3">>  </span> <span id="screentyped-3"></span><br/>
+                            <span id="com-3"></span><br/><br/>
+
+    						<span class="cursor" id="cursor4">>  </span> <span id="screentyped-4"></span><br/>
+                            <span id="com-4"></span><br/><br/>
     					</div>
     				</div>
     			</div>
