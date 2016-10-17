@@ -41,27 +41,29 @@ jQuery(document).ready(function() {
     jQuery("#cursor2").hide(),
     jQuery("#cursor3").hide(),
     jQuery("#cursor4").hide(),
+    jQuery("#images").hide()
 
 
     jQuery("#cursor1").show(), jQuery("#screentyped-1").typed({
-        strings: ["", "whoai ", "whoami "],
+        strings: ["", "whoai", "whoami "],
         stringsstops: [0, 3, 0],
         typeSpeed: 100,
         startDelay: 0,
         callback: function() {
-            jQuery("#typed-cursor").remove(), $("#com-1").append("Hi, I'm Chris!"), jQuery("#cursor2").show(), jQuery("#screentyped-2").typed({
-                strings: ["echo about.txt"],
+            jQuery("#typed-cursor").remove(), setTimeout(function(){ $("#com-1").append("Hi, I'm Chris!"), jQuery("#cursor2").show(), jQuery("#screentyped-2").typed({
+                strings: ["./about.sh"],
                 stringsstops: [0],
                 typeSpeed: 50,
-                startDelay: 3000,
+                startDelay: 2000,
                 callback: function() {
-                    jQuery("#typed-cursor").remove(), $("#com-2").append("Master's degree student @ University of Athens.<br/>Curious about how things work."), jQuery("#cursor3").show(), jQuery("#screentyped-3").typed({
-                        strings: ["more"],
-                        stringsstops: [0],
-                        typeSpeed: 50,
-                        startDelay: 4000,
+                    jQuery("#typed-cursor").remove(), setTimeout(function(){ $("#com-2").append("Master's degree student @ University of Athens.<br/>Curious about how things work.<br/>Playing around with [iOS, networks, servers, legos, drones, security];"), jQuery("#cursor3").show(), jQuery("#screentyped-3").typed({
+                        strings: ["tail -f /con", "tail -f ~/contact/"],
+                        stringsstops: [7, 0],
+                        typeSpeed: 70,
+                        startDelay: 2000,
                         callback: function() {
-                            jQuery("#typed-cursor").remove(), setTimeout(function(){ $("#com-3").append("Playing around with [iOS, networks, servers, legos, drones, security];"), jQuery("#cursor4").show(), jQuery("#screentyped-4").typed({
+                            jQuery("#typed-cursor").remove(), setTimeout(function(){ jQuery("#images").show(), jQuery("#cursor4").show(), 
+                            jQuery("#screentyped-4").typed({
                                 strings: ["sudo :(){ :: & ", "sudo :(){ :|: & };:"],
                                 stringsstops: [8, 0],
                                 typeSpeed: 100,
@@ -70,11 +72,13 @@ jQuery(document).ready(function() {
                                     jQuery("#typed-cursor").remove(), clearInterval(r), clearInterval(i)
                                 }
                             })
-                            }, 1000)
+                            },1000)
                         }
                     })
+                    },1000)
         		}
             })
+            },1000)
         }
     });
 });
@@ -89,16 +93,17 @@ jQuery(document).ready(function() {
     				<div class="screen-wrapper">
     					<div class="screen-typed">
                             <span class="cursor" id="cursor1">>  </span> <span id="screentyped-1"></span><br/>
-    						<span id="com-1"></span><br/><br/>
+    						<span id="com-1"></span><br/>
+                            <br/>
 
     						<span class="cursor" id="cursor2">>  </span> <span id="screentyped-2"></span><br/>
-                            <span id="com-2"></span><br/><br/>
+                            <span id="com-2"></span><br/>
+                            <br/>
 
     						<span class="cursor" id="cursor3">>  </span> <span id="screentyped-3"></span><br/>
-                            <span id="com-3"></span><br/><br/>
+                            <br/>
 
     						<span class="cursor" id="cursor4">>  </span> <span id="screentyped-4"></span><br/>
-                            <span id="com-4"></span><br/><br/>
     					</div>
     				</div>
     			</div>
@@ -107,7 +112,6 @@ jQuery(document).ready(function() {
     	  	<br />
     		<footer role="contentinfo">
     			<div class="region region-footer">
-
     				<div id="images">
     					<a href="mailto:hi@kasketis.com">
     				        <img src="icons/mail.png" height="56" width="56" />
