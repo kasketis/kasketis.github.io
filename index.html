@@ -2,7 +2,7 @@
 <html lang="en" class="no-js">
 <head profile="http://www.w3.org/1999/xhtml/vocab">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
+<link href="favicon.ico" rel="icon" type="image/x-icon" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 <meta name="description" content="Personal page of Christos Kasketis" />
 <link rel="canonical" href="http://www.kasketis.com" />
@@ -40,23 +40,23 @@ jQuery(document).ready(function() {
     jQuery("#cursor1").show(), jQuery("#screentyped-1").typed({
         strings: [">", "> Hi! I'm Christos! ", "> Hi! I'm Chris! "],
         stringsstops: [1, 12, 0],
-        typeSpeed: 70,
+        typeSpeed: 100,
         startDelay: 0,
         callback: function() {
             jQuery("#typed-cursor").remove(), jQuery("#cursor2").show(), jQuery("#screentyped-2").typed({
                 strings: ["> Master's degree student -", "> Master's degree student @ University of Athens"],
                 stringsstops: [25, 0],
-                typeSpeed: 45,
+                typeSpeed: 40,
                 callback: function() {
                     jQuery("#typed-cursor").remove(), jQuery("#cursor3").show(), jQuery("#screentyped-3").typed({
                         strings: ["> Curious aout", "> Curious about how things work."],
                         stringsstops: [10, 0],
-                        typeSpeed: 45,
+                        typeSpeed: 40,
 		                callback: function() {
 		                    jQuery("#typed-cursor").remove(), jQuery("#cursor4").show(), jQuery("#screentyped-4").typed({
 		                        strings: ["> Playing around with iO", "> Playing around with [iOS, networks, servers, legos, drones, security];"],
 		                        stringsstops: [19, 0],
-		                        typeSpeed: 50,
+		                        typeSpeed: 40,
 		                        callback: function() {
 		                            clearInterval(r), clearInterval(i), $('#social').show()
 		                        }
@@ -110,6 +110,11 @@ jQuery(document).ready(function() {
     				    </a>
     				</div>
     	  		</div>
+                <center style="color:#666; font-size:14px">
+                <br/>
+                Made on terminal. Hosted on Github
+                </center>
+
     		</footer>
     	</div>
     </div> 
