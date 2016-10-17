@@ -1,66 +1,114 @@
-<html>
-<head>
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="description" content="Personal page of Christos Kasketis" />
+<link rel="canonical" href="http://www.kasketis.com" />
+<link rel="shortlink" href="http://www.kasketis.com" />
+<title>Personal webpage of Christos Kasketis</title>
+<style type="text/css" media="all">@import url("css/style.css");</style>
 <link href='https://fonts.googleapis.com/css?family=Advent+Pro:100,200,300,500&amp;subset=latin,greek' rel='stylesheet' type='text/css'>
-<style media="screen" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+!function(e){"use strict";var t=function(t,n){this.el=e(t);this.options=e.extend({},e.fn.typed.defaults,n);this.text=this.el.text();this.typeSpeed=this.options.typeSpeed;this.startDelay=this.options.startDelay;this.backSpeed=this.options.backSpeed;this.backDelay=this.options.backDelay;this.strings=this.options.strings;this.stringsstops=this.options.stringsstops;this.strPos=0;this.arrayPos=0;this.string=this.strings[this.arrayPos];this.stopNum=this.stringsstops[this.arrayPos];this.loop=this.options.loop;this.loopCount=this.options.loopCount;this.curLoop=1;if(this.loop===false){this.stopArray=this.strings.length-1}else{this.stopArray=this.strings.length}this.build()};t.prototype={constructor:t,init:function(){var e=this;setTimeout(function(){e.typewrite(e.string,e.strPos)},e.startDelay)},build:function(){this.el.after('<span id="typed-cursor">|</span>');this.init()},typewrite:function(e,t){var n=Math.round(Math.random()*(100-30))+this.typeSpeed;var r=this;setTimeout(function(){if(r.arrayPos<r.strings.length){if(e.substr(t,1)==="^"){var n=e.substr(t+1).indexOf(" ");var i=e.substr(t+1,n);e=e.replace("^"+i,"")}else{var i=0}setTimeout(function(){r.el.text(r.text+e.substr(0,t));if(t>e.length&&r.arrayPos<r.stopArray){clearTimeout(n);var n=setTimeout(function(){r.backspace(e,t)},r.backDelay)}else{t++;r.typewrite(e,t);if(r.loop===false){if(r.arrayPos===r.stopArray&&t===e.length){var n=r.options.callback();clearTimeout(n)}}}},i)}else if(r.loop===true&&r.loopCount===false){r.arrayPos=0;r.init()}else if(r.loopCount!==false&&r.curLoop<r.loopCount){r.arrayPos=0;r.curLoop=r.curLoop+1;r.init()}},n)},backspace:function(e,t){var n=Math.round(Math.random()*(100-30))+this.backSpeed;var r=this;setTimeout(function(){r.stopNum=r.stringsstops[r.arrayPos];r.el.text(r.text+e.substr(0,t));if(t>r.stopNum){t--;r.backspace(e,t)}else if(t<=r.stopNum){clearTimeout(n);var n=r.arrayPos=r.arrayPos+1;r.typewrite(r.strings[r.arrayPos],t)}},n)}};e.fn.typed=function(n){return this.each(function(){var r=e(this),i=r.data("typed"),s=typeof n=="object"&&n;if(!i)r.data("typed",i=new t(this,s));if(typeof n=="string")i[n]()})};e.fn.typed.defaults={strings:["These are the default values...","You know what you should do?","Use your own!","Have a great day!"],stringsstops:[0,0,0,0],typeSpeed:0,startDelay:0,backSpeed:0,backDelay:500,loop:false,loopCount:false,callback:function(){null}}}(window.jQuery)
+</script>
+<script>
+jQuery(document).ready(function() {	
+    function e() {
+        var e = o.height(),
+            n = o.scrollTop(),
+            a = n + e;
+        jQuery.each(s, function() {
+            var e = jQuery(this),
+                r = e.outerHeight(),
+                i = e.offset().top,
+                s = i + r;
+            e.find(".skillbar").each(function() {
+                jQuery(this).height(jQuery(this).find(".skillbar-title").height())
+            }), s >= n && a >= i && (e.hasClass("in-view") || (e.find(".skillbar").each(function() {
+                jQuery(this).find(".skillbar-bar").animate({
+                    width: jQuery(this).attr("data-percent")
+                }, 3e3)
+            }), e.find(".pixel-image").each(function() {
+                t(jQuery(this))
+            })), e.addClass("in-view"))
+        })
+    }
 
-f0 { font-weight: 200; font-size: 70pt; }
-f1 { font-weight: 300; font-size: 70pt; color:#6c92a0; background-color: white; }
-f2 { font-weight: 200; font-size: 26pt; }
-f3 { font-weight: 200; font-size: 20pt; }
-f4 { font-weight: 200; font-size: 12pt; }
-a:hover, a:visited, a:link, a:active { text-decoration: none; color: white; }
-
-body { font-family: 'Advent Pro', sans-serif; 
-color: white;
-background: linear-gradient(266deg, #727b7d, #93ccd9, #3a7887);
-background-size: 600% 600%;
-
--webkit-animation: AnimationName 30s ease infinite;
--moz-animation: AnimationName 30s ease infinite;
--o-animation: AnimationName 30s ease infinite;
-animation: AnimationName 30s ease infinite;
-
-@-webkit-keyframes AnimationName {
-    0%{background-position:0% 51%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 51%}
-}
-@-moz-keyframes AnimationName {
-    0%{background-position:0% 51%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 51%}
-}
-@-o-keyframes AnimationName {
-    0%{background-position:0% 51%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 51%}
-}
-@keyframes AnimationName {
-    0%{background-position:0% 51%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 51%}
-}
-}
-</style>
+    jQuery("#cursor1").show(), jQuery("#screentyped-1").typed({
+        strings: [">", "> Hi! I'm Christos! ", "> Hi! I'm Chris! "],
+        stringsstops: [1, 12, 0],
+        typeSpeed: 70,
+        startDelay: 0,
+        callback: function() {
+            jQuery("#typed-cursor").remove(), jQuery("#cursor2").show(), jQuery("#screentyped-2").typed({
+                strings: ["> Master's degree student -", "> Master's degree student @ University of Athens"],
+                stringsstops: [25, 0],
+                typeSpeed: 45,
+                callback: function() {
+                    jQuery("#typed-cursor").remove(), jQuery("#cursor3").show(), jQuery("#screentyped-3").typed({
+                        strings: ["> Curious aout", "> Curious about how things work."],
+                        stringsstops: [10, 0],
+                        typeSpeed: 45,
+		                callback: function() {
+		                    jQuery("#typed-cursor").remove(), jQuery("#cursor4").show(), jQuery("#screentyped-4").typed({
+		                        strings: ["> Playing around with iO", "> Playing around with [iOS, networks, servers, legos, drones, security];"],
+		                        stringsstops: [19, 0],
+		                        typeSpeed: 50,
+		                        callback: function() {
+		                            clearInterval(r), clearInterval(i), $('#social').show()
+		                        }
+		                    })
+                		}
+                    })
+                }
+            })
+        }
+    });
+});
+</script>
 </head>
-<body>
-<center>
-<br /><br /><br /><br />
-<f0>Hi, I'm </f0><f1>Chris</f1><f0>!</f0>
-<br/>
-<f2>
-<br />
-Master's degree student @ University of Athens. 
-<br/>
-Curious about how things work.
-<br />
-Playing around with [iOS, networks, servers, legos, drones, security];
-<br />
-</f2>
-<br/><br/>
-<f3><a href="https://github.com/kasketis">Github</a> | <a href="https://linkedin.com/in/kasketis">LinkedIn</a> | Contact</f3>
-<br /><br/>
-<f4>> Made on terminal. Hosted on Github</f4>
-</center>
+
+<body class="html front not-logged-in no-sidebars page-node page-node- page-node-6 node-type-page" >
+    <div class="mainpage row home">
+    	<div class="mainpage-wrapper small-12 small-centered columns">
+    		<main role="main">
+    			<div class="screen">
+    				<div class="screen-wrapper">
+    					<div class="screen-typed">
+    						<span class="cursor" id="cursor1"> </span> <span id="screentyped-1"></span><br/>
+    						<span class="cursor" id="cursor2"> </span> <span id="screentyped-2"></span><br/>
+    						<span class="cursor" id="cursor3"> </span> <span id="screentyped-3"></span><br/>
+    						<span class="cursor" id="cursor4"> </span> <span id="screentyped-4"></span>
+    					</div>
+    				</div>
+    			</div>
+    		</main>
+    	  
+    	  	<br />
+    		<footer role="contentinfo">
+    			<div class="region region-footer">
+
+    				<div id="images">
+    					<a href="mailto:hi@kasketis.com">
+    				        <img src="icons/mail.png" height="56" width="56" />
+    				        <div class="caption">Mail</div>
+    				    </a>
+    				    <a href="https://github.com/kasketis" target="_blank">
+    				        <img src="icons/github.png" height="56" width="56" />
+    				        <div class="caption">Github</div>
+    				    </a>
+    				    <a href="https://linkedin.com/in/kasketis" target="_blank">
+    				        <img src="icons/in.png" height="56" width="56" />
+    				        <div class="caption">Linkedin</div>
+    				    </a>
+    				</div>
+
+    	  		</div>
+    		</footer>
+    	</div>
+    </div> 
 </body>
 </html>
