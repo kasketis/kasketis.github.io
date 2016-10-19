@@ -50,19 +50,19 @@ jQuery(document).ready(function() {
         typeSpeed: 100,
         startDelay: 0,
         callback: function() {
-            jQuery("#typed-cursor").remove(), setTimeout(function(){ $("#com-1").append("Hi, I'm Chris!"), jQuery("#photo").show(), jQuery("#cursor2").show(), jQuery("#screentyped-2").typed({
-                strings: ["./about.sh"],
+            jQuery("#typed-cursor").remove(), setTimeout(function(){ $("#com-1").append("Hi, I'm Chris!"), jQuery("#photo").fadeIn(500), jQuery("#cursor2").show(), jQuery("#screentyped-2").typed({
+                strings: ["./aboutme.sh"],
                 stringsstops: [0],
                 typeSpeed: 50,
                 startDelay: 2000,
                 callback: function() {
-                    jQuery("#typed-cursor").remove(), setTimeout(function(){ $("#com-2").append("Master's degree student @ University of Athens.<br/>Curious about how things work.<br/>Playing around with [iOS, networks, servers, legos, drones, security];"), jQuery("#cursor3").show(), jQuery("#screentyped-3").typed({
+                    jQuery("#typed-cursor").remove(), setTimeout(function(){ $("#com-2").append("Master's degree student @ University of Athens.")}, 400), setTimeout(function(){ $("#com-2").append("<br/>Curious about how things work.")},1300), setTimeout(function(){ $("#com-2").append("<br/>Playing around with [iOS, networks, servers, legos, drones, security];"), jQuery("#cursor3").show(), jQuery("#screentyped-3").typed({
                         strings: ["tail -f /con", "tail -f ~/contact"],
                         stringsstops: [7, 0],
                         typeSpeed: 70,
                         startDelay: 2000,
                         callback: function() {
-                            jQuery("#typed-cursor").remove(), setTimeout(function(){ jQuery("#images").show(), jQuery("#cursor4").show(), 
+                            jQuery("#typed-cursor").remove(), setTimeout(function(){ jQuery("#images").fadeIn(200), jQuery("#cursor4").show(), 
                             jQuery("#screentyped-4").typed({
                                 strings: ["sudo :(){ :: & ", "sudo :(){ :|: & };:"],
                                 stringsstops: [8, 0],
@@ -72,10 +72,10 @@ jQuery(document).ready(function() {
                                     jQuery("#typed-cursor").remove(), clearInterval(r), clearInterval(i)
                                 }
                             })
-                            },500)
+                            }, 500)
                         }
                     })
-                    },500)
+                    },2200)
         		}
             })
             },500)
